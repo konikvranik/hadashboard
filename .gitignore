@@ -19,3 +19,5 @@ hapush.pid
 
 # Virtual environment folder for running hapush
 venv*
+
+.idea
