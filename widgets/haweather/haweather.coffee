@@ -22,8 +22,12 @@ class Dashing.Haweather extends Dashing.Widget
     new Batman.TerminalAccessible (attr) =>
       @_icons[attr]
 
+  @accessor 'temp',
+    get: -> if @_temp then Math.round(@_temp) else 0
+    set: (key, value) -> @_temp = v
+
   @accessor 'now_temp',
-    get: -> if @_temp then Math.floor(@_temp) else 0
+    get: -> if @_temp then Math.round(@_temp) else 0
     set: (key, value) -> @_temp = value
 
   ready: ->
