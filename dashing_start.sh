@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /home/pi/homeassistant
+cd /srv/homeassistant
 
 /usr/local/bin/dashing start

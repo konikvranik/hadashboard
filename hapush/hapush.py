@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/srv/homeassistant/bin/python3
 
 import json
 import traceback
