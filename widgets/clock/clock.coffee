@@ -11,7 +11,7 @@ class Dashing.Clock extends Dashing.Widget
     h = today.getHours()
     m = today.getMinutes()
     m = @formatTime(m)
-    @set('time', @formatHours(h) + ":" + m + " " + @formatAmPm(h))
+    @set('time', h + ":" + m)
     @set('date', today.toLocaleDateString())
 
   formatTime: (i) ->
