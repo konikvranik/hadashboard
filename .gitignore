@@ -1,5 +1,5 @@
 # Ignore any dashboards you create
-dashboards/*
+#dashboards/*
 # But don't ignore these
 !dashboards/example.erb
 !dashboards/layout.erb
@@ -15,6 +15,7 @@ Gemfile.lock
 dashing.pid
 .bundle
 log/thin.log
+hapush.pid
 
 # Virtual environment folder for running hapush
 venv*

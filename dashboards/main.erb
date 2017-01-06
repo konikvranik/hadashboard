@@ -1,0 +1,89 @@
+<% content_for :title do %>HADashboard<% end %>
+
+<div class="gridster"> <!-- Main Panel - PAGE 1 -->
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="clock" data-view="Clock" data-color="#FF0000"></div>
+    </li>
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="weather" data-view="Haweather" data-unit="&deg;C" data-color="#FF0000"></div>
+    </li>
+
+
+	<li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="svetlo_v_loznici_switch_3_0" data-view="Haswitch" data-title="světlo v ložnici" data-color="#FF0000"></div>
+    </li>
+	<li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="svetlo_v_predsini_switch_10_0" data-view="Haswitch" data-title="světlo v předsíni" data-color="#FF0000"></div>
+    </li>
+	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="svetlo_nad_linkou_switch_4_0" data-view="Haswitch" data-title="světlo nad linkou" data-color="#FF0000"></div>
+    </li>
+	<li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="svetlo_v_kuchyni_switch_5_0" data-view="Haswitch" data-title="světlo v kuchyni" data-color="#FF0000"></div>
+    </li>
+	<li data-row="5" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="all_lights" data-view="Hagroup" data-title="Všechna světla" data-color="#FF0000"></div>
+    </li>
+	
+	<li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="hdmi_0" data-view="Haswitch" data-title="TV" data-color="#FF0000"></div>
+    </li>
+	<li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="zehlicka_switch_6_0" data-view="Haswitch" data-title="žehlička" data-color="#FF0000"></div>
+    </li>
+
+	<li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="vstupni_dvere_sensor_7_0" data-view="Habinary" data-title="dveře" data-color="#FF0000"></div>
+    </li>
+	<li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="zehlicka_on" data-view="Habinary" data-title="žehlička" data-color="#FF0000"></div>
+    </li>
+
+	
+    <li data-row="5" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="cpage1" data-view="ChangePage" data-icon="cogs" data-title="Hlavní panel" data-page="1" data-stagger="true" data-fasttransition="true" data-event-click="onClick"></div>
+    </li>
+    <li data-row="5" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="cpage2" data-view="ChangePage" data-icon="cogs" data-title="Prezence" data-page="2" data-stagger="true" data-fasttransition="true" data-event-click="onClick" ></div>
+    </li>
+
+    <li data-row="6" data-col="1" data-sizex="4" data-sizey="1">
+      <div data-id="reload" data-view="Obnovit"></div>
+    </li>
+
+  </ul>
+</div>
+
+<div class="gridster"> <!-- Upstairs - PAGE 2 -->
+  <ul>
+	<li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="bara" data-view="Hadevicetracker" data-title="Barča"></div>
+    </li>
+	<li data-row="3" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="viki" data-view="Hadevicetracker" data-title="Viki"></div>
+    </li>
+	<li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="veru" data-view="Hadevicetracker" data-title="Veru"></div>
+    </li>
+	<li data-row="2" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="reditelka" data-view="Hadevicetracker" data-title="Veru"></div>
+    </li>
+
+ 	<li data-row="3" data-col="3" data-sizex="2" data-sizey="2">
+      <div data-id="hpa_sgs6" data-view="Hadevicetracker" data-title="Petr"></div>
+    </li>
+
+    <li data-row="5" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="cpage1" data-view="ChangePage" data-icon="cogs" data-title="Hlavní panel" data-page="1" data-stagger="true" data-fasttransition="true" data-event-click="onClick"></div>
+    </li>
+    <li data-row="5" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="cpage2" data-view="ChangePage" data-icon="cogs" data-title="Prezence" data-page="2" data-stagger="true" data-fasttransition="true" data-event-click="onClick"></div>
+    </li>
+
+    <li data-row="6" data-col="1" data-sizex="4" data-sizey="1">
+      <div data-id="reload" data-view="Obnovit"></div>
+    </li>
+
+ </ul>
+</div>
