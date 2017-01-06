@@ -24,7 +24,7 @@ class Dashing.Haweather extends Dashing.Widget
 
   @accessor 'temp',
     get: -> if @_temp then Math.round(@_temp) else 0
-    set: (key, value) -> @_temp = v
+    set: (key, value) -> @_temp = value
 
   @accessor 'now_temp',
     get: -> if @_temp then Math.round(@_temp) else 0
