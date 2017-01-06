@@ -19,4 +19,3 @@ class Dashing.Haservice extends Dashing.ClickableWidget
 
   onClick: (event) ->
     @postState()
-

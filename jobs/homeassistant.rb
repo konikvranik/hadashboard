@@ -170,17 +170,6 @@ post '/homeassistant/service' do
 	return respondWithSuccess()
 end
 
-
-get '/homeassistant/service' do
-	ha_api("services/" + params["service"], "post", params["payload"])
-	return respondWithSuccess()
-end
-
-post '/homeassistant/service' do
-	ha_api("services/" + params["service"], "post", params["payload"])
-	return respondWithSuccess()
-end
-
 post '/homeassistant/scene' do
 	entity_id = "scene." + params["widgetId"]
 	ha_api("services/scene/turn_on", "post", {"entity_id" => entity_id})
@@ -343,32 +332,16 @@ end
 #Update the weather ever so often
 SCHEDULER.every '15m', :first_in => 0 do |job|
 	#Current weather
-	response = ha_api("states/sensor.dark_sky_temperature", "get")
-	temp = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_humidity", "get")
-	humidity = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_precip_probability", "get")
-	precip = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_precip_intensity", "get")
-	precipintensity = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_wind_speed", "get")
-	windspeed = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_pressure", "get")
-	pressure = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_wind_bearing", "get")
-	windbearing = response["state"]
-
-
-	response = ha_api("states/sensor.dark_sky_apparent_temperature", "get")
-	tempchill = response["state"]
-
-	response = ha_api("states/sensor.dark_sky_icon", "get")
+	response = ha_api("states/weather.openweathermap", "get")
+	attributes = response["attributes"]
+	temp = attributes["temperature"]
+	humidity = attributes["humidity"]
+	#precip = response["attributes"][""]
+	#precipintensity = response["attributes"][""]
+	pressure = attributes["pressure"]
+	windspeed = attributes["wind_speed"]
+	windbearing = attributes["wind_bearing"]
+	#tempchill = response["attributes"][""]
 	icon = response["state"].gsub(/-/, '_')
 
 	#Emit the event
@@ -376,9 +349,9 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
 		temp: temp,
 		humidity: humidity,
 		icon: icon,
-		tempchill: tempchill,
-		precipintensity: precipintensity,
-		precip: precip,
+		#tempchill: tempchill,
+		#precipintensity: precipintensity,
+		#precip: precip,
 		windspeed: windspeed,
 		windbearing: windbearing,
 		pressure: pressure
