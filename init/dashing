@@ -25,11 +25,11 @@ set -e
 
 # Must be a valid filename
 NAME=dashing
-DASHING_DIR=/srv/hass/src/hadashboard
+DASHING_DIR=/srv/hadashboard
 DAEMON=/usr/local/bin/dashing
 PIDFILE="$DASHING_DIR/$NAME.pid"
 DAEMON_OPTS="start -d -P $PIDFILE"
-GEM_HOME=/usr/local/lib/ruby/gems/1.9.1
+GEM_HOME=/usr/lib/ruby/gems/2.1.0
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
