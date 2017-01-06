@@ -3,14 +3,19 @@ class Dashing.Haweather extends Dashing.Widget
     super
     @_icons =
       rain: '&#xe009',
+      rainy: '&#xe009',
       snow: '&#xe036',
+      snowy: '&#xe036',
       sleet: '&#xe003',
       wind: '&#xe021',
+      windy: '&#xe021',
       fog: '&#xe01b',
       cloudy: '&#xe000',
       clear_day: '&#xe028',
+      clear: '&#xe028',
       clear_night: '&#xe02d',
       partly_cloudy_day: '&#xe001',
+      partlycloudy: '&#xe001',
       partly_cloudy_night: '&#xe002'
 
   @accessor 'climacon', ->
