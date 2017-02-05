@@ -2,7 +2,7 @@ require 'dashing'
 
 configure do
 #  set :auth_token, 'AUTH_TOKEN'
-  set :default_dashboard, 'main' #<==== set default dashboard like this
+  set :default_dashboard, 'landscape' #<==== set default dashboard like this
 
 #  helpers do
 #    def protected!
