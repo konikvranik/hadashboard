@@ -10,14 +10,13 @@ $(function() {
   });
   
 var sheet = document.createElement('style')
+
 function updateOpacity() {
-var h = new Date().getHours();
-if (h > 7 && h < 20) {
-sheet.innerHTML = ".widget {opacity: 1;}";
-} else {
-sheet.innerHTML = ".widget {opacity: .2;}";
+  var h = new Date().getHours() + (new Date().getMinutes()/60);
+  var o = Math.max(.2,Math.min(1, Math.sin((h-1)*Math.PI/12+Math.PI*1.5)*2+.5));
+  sheet.innerHTML = ".widget {opacity: "+o+";}";
 }
-}
+
 setInterval(updateOpacity, 30000);
 updateOpacity();
 document.body.appendChild(sheet);
@@ -80,9 +79,6 @@ document.body.appendChild(sheet);
     </li> 
     <li data-row="8" data-col="12" data-sizex="2" data-sizey="2">
       <div data-id="hdmi_0" data-view="Haswitch" data-title="📺 TV" data-color="#FF0000"></div>
-    </li>
-   <li data-row="8" data-col="15" data-sizex="2" data-sizey="2">
-      <div data-id="all_lights" data-view="Hagroup" data-title="💡💡 vše 💡💡" data-color="#FF0000"></div>
     </li>
     
   </ul>
