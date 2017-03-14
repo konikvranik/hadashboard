@@ -3,9 +3,9 @@ class Dashing.Haswitch extends Dashing.ClickableWidget
     super
     @queryState()
 
-    @accessor 'state',
-      get: -> @_state ? 'off'
-      set: (key, value) -> @_state = value
+  @accessor 'state',
+    get: -> @_state ? 'off'
+    set: (key, value) -> @_state = value
 
   @accessor 'icon',
     get: -> if @['icon'] then @['icon'] else
