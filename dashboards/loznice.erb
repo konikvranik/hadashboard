@@ -13,7 +13,7 @@ var sheet = document.createElement('style')
 
 function updateOpacity() {
   var h = new Date().getHours() + (new Date().getMinutes()/60);
-  var o = Math.max(.2,Math.min(1, Math.sin((h-1)*Math.PI/12+Math.PI*1.5)*2+.5));
+  var o = Math.max(.3,Math.min(1, Math.sin((h-1)*Math.PI/12+Math.PI*1.5)*2+.5));
   sheet.innerHTML = ".widget {opacity: "+o+";}";
 }
 
@@ -47,7 +47,7 @@ document.body.appendChild(sheet);
       <div data-id="svetlo_v_loznici_100" data-view="Haswitch" data-title="💡 ložnice" data-color="#FF0000"></div>
     </li>
     <li data-row="4" data-col="10" data-sizex="3" data-sizey="3">
-      <div data-id="led_v_loznici" data-view="Hadimmer" data-title="💡 LEDky v ložnici" data-color="#FF0000"></div>
+      <div data-id="esp_multisensor_0_5" data-view="Hadimmer" data-title="💡 LEDky v ložnici" data-color="#FF0000"></div>
     </li>
 	
 	
@@ -60,10 +60,10 @@ document.body.appendChild(sheet);
 	
 		
     <li data-row="6" data-col="1" data-sizex="2" data-sizey="2">
-      <div data-id="teplota_v_loznici_147" data-view="Hatemp" data-title="🌡" data-color="#FF0000"></div>
+      <div data-id="esp_multisensor_0_3" data-view="Hatemp" data-title="🌡" data-color="#FF0000"></div>
     </li>
     <li data-row="6" data-col="3" data-sizex="2" data-sizey="2">
-      <div data-id="vlhkost_v_loznici_146" data-view="Hahumiditymeter" data-color="#FF0000"></div>
+      <div data-id="esp_multisensor_0_4" data-view="Hahumiditymeter" data-color="#FF0000"></div>
     </li>
  	
 	<li data-row="8" data-col="1" data-sizex="2" data-sizey="2">

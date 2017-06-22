@@ -328,7 +328,6 @@ get '/homeassistant/humidity' do
 	return JSON.generate({"value" => response["state"]})
 end
 
-
 #Update the weather ever so often
 SCHEDULER.every '15m', :first_in => 0 do |job|
 	#Current weather
@@ -373,3 +372,17 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
 		pressure: pressure
 	})
 end
+SCHEDULER.every '5s', :first_in => 0 do |job|
+	response = ha_api("states/media_player.kodi", "get")
+	state = response["state"]
+	artist = response["attributes"]["media_artist"]
+	album = response["attributes"]["media_album_name"]
+	title = response["attributes"]["media_title"]
+	send_event('media', {
+		state: state,
+		artist: artist,
+		album: album,
+		title: title
+	})
+end
+
