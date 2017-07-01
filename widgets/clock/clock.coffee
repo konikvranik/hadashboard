@@ -12,7 +12,7 @@ class Dashing.Clock extends Dashing.Widget
     m = today.getMinutes()
     m = @formatTime(m)
     @set('time', h + ":" + m)
-    @set('date', today.toLocaleDateString())
+    @set('date', today.toLocaleDateString("cs-CZ"))
 
   formatTime: (i) ->
     if i < 10 then "0" + i else i

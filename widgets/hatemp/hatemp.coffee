@@ -4,7 +4,7 @@ class Dashing.Hatemp extends Dashing.Widget
     @queryState()
 
   @accessor 'value',
-    get: -> if @_value then Math.round(@_value) else 0
+    get: -> if @_value then Math.round(@_value * 10)/10 else 0
     set: (key, value) -> @_value = value
 
   queryState: ->
