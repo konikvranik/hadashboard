@@ -1,7 +1,7 @@
 class Dashing.Hahumiditymeter extends Dashing.Widget
 
-  @accessor 'value', 
-    get: -> if @_value then Math.round(@_value) else 0
+  @accessor 'value',
+    get: -> if @_value then Math.round(@_value * 10)/10 else 0
     set: (key, value) -> @_value = value
     Dashing.AnimatedValue
 
@@ -24,3 +24,5 @@ class Dashing.Hahumiditymeter extends Dashing.Widget
     meter.attr("data-bgcolor", meter.css("background-color"))
     meter.attr("data-fgcolor", meter.css("color"))
     meter.knob()
+
+  onData: (data) ->
